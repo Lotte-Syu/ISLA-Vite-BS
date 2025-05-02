@@ -1,0 +1,30 @@
+// ===== 主色系定義變數 =====
+$white: #fbfbfb;
+$main-color: #fd7061;
+$sub-color: #fa8e83;
+$strong-color: #fd4f3c;
+$sub-element: #bebebe;
+$main-text: #373737;
+$sub-text: #858585;
+$bg-gray: #fafafa;
+
+// ===== 新增BS的主題顏色 =====
+$custom-colors: (
+  "main": $main-color,
+  "sub": $sub-color,
+  "strong": $strong-color,
+  "elem": $sub-element,
+  "maintext": $main-text,
+  "subtext": $sub-text,
+  "graybg": $bg-gray
+);
+
+// 下面指令白話文
+// 我想讓 Bootstrap 使用我定義的primary和secondary，再新增我另外定義在 $custom-colors 裡的所有顏色
+$theme-colors: map-merge(
+  (
+    "primary": $main-color,
+    "secondary": $sub-color
+  ),
+  $custom-colors
+);

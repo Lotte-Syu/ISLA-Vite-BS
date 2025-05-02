@@ -1,0 +1,204 @@
+body{
+  .container-fluid{
+    padding-inline: 24px !important;
+  }
+}
+@mixin step-style($bg-color){
+  background: $bg-color;
+  color:var(--white);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-active{
+  @include step-style(var(--sub-color));
+}
+.step-progress{
+  @include step-style(var(--bar-linear));
+}
+.step-regular{
+  @include step-style(var( --step-linear));
+}
+
+.step-container{
+  width: 140px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+@mixin step-line-style($line-color){
+  background: $line-color;
+  width: 300px;
+  height: 5px;
+}
+
+.step-line-active{
+  @include step-line-style(var(--bar-linear));
+}
+.step-line{
+  @include step-line-style(var(--step-linear));
+}
+.text-ellipsis {
+  width: 12em;  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.order-summary {
+  position: sticky;
+  top: 1rem;
+  bottom: auto;
+  width: auto;
+  padding: 16px;
+  button.btn-primary{
+    width: 100%;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .order-summary {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 36px;
+    top: auto;
+    z-index: 10;
+    background: var(--white);
+    h5{
+      font-size: 2.62rem; //42px
+    }
+    h4{
+      font-size: 3rem; //48px
+    }
+    p,i{
+      font-size: 2.25rem; //36px
+    }
+    .mb-3{
+      margin-bottom: 1.5rem !important;
+    }
+    button.btn-primary{
+      width: 300px;
+      font-size: 2.5rem;
+      margin-left: auto;
+    }
+  }
+}
+.accordion-button {
+  background: var(--coupon-linear);
+  font-weight: bold;
+  border-radius: 0;
+  box-shadow: none;
+  color: #fff;
+  padding: 1rem;
+  &::after{
+    filter: brightness(0) invert(1);
+  }
+  &:not(.collapsed) {
+    background: var(--coupon-linear);
+    color: #fff;
+  }
+  &:focus {
+    box-shadow: none; 
+  }
+}
+
+@mixin card-shadow ($card-border-radious){
+  border-radius: $card-border-radious;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.9) 100%);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+.coupon-shadow{
+  @include card-shadow(0.5rem)
+}
+
+
+// nav-underline
+.nav-underline .nav-link {
+  color: var(--sub-text);
+  position: relative;
+
+  // 初始化底線樣式（非active時也要有::after才能做動畫）
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: 3px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+
+    // 動畫初始化
+    opacity: 0;
+    transform: scaleX(0.6);
+    transform-origin: center;
+    transition: all 0.3s ease;
+  }
+
+  // active底線展開動畫
+  &.active {
+    color: var(--main-color);
+    border-bottom: none;
+
+    &::after {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+}
+
+
+.card-hover {
+  position: relative;
+  transition: opacity 0.3s ease;
+
+  // 預設整張卡片正常顯示
+  &:hover {
+    opacity: 0.7; 
+  }
+
+  // hover 時圖片放大
+  &:hover .card-img-top {
+    transform: scale(1.05); 
+  }
+
+  .card-img-top {
+    transition: transform 0.4s ease;
+  }
+
+  .add-to-cart {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--strong-color);
+    background-color: var(--white);
+    color: var(--strong-color);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  // hover 時顯示按鈕
+  &:hover .add-to-cart {
+    opacity: 0.9;
+    pointer-events: auto;
+  }
+}

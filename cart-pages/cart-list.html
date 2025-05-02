@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plaster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      /* * {
+        outline: 1px solid rgba(0, 0, 0, 0.3);
+      } */
+    </style>
+    <title>ISLA 購物車</title>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container text-center text-lg-start">
+      <h1 class="text-subtext h2 m-5">購物袋</h1>
+    </div>
+
+    <!-- step-icon -->
+    <section class="container d-none d-lg-block mb-5">
+      <div class="d-flex align-items-center justify-content-center">
+        <!-- step1 -->
+        <div class="step-container">
+          <div class="step-active">1</div>
+          <span class="h5 text-secondary">確認購物車</span>
+        </div>
+        <div class="rounded-pill step-line-active"></div>
+        <!-- step2 -->
+        <div class="step-container">
+          <div class="step-progress">2</div>
+          <span class="h5 text-subtext">付款及運送方式</span>
+        </div>
+        <div class="rounded-pill step-line"></div>
+        <!-- step3 -->
+        <div class="step-container">
+          <div class="step-regular">3</div>
+          <span class="h5 text-subtext">完成</span>
+        </div>
+      </div>
+    </section>
+    <!-- main -->
+    <section class="container-fluid container-lg">
+      <div class="row">
+        <!-- left -->
+        <div class="col-lg-8 col-12">
+          <div class="product-list card-style mb-3" style="height: 500px">
+            <!-- product-card -->
+            <!-- product-card -->
+            <!-- product-card -->
+          </div>
+          <!-- coupon-product -->
+          <div class="accordion mb-3 coupon-shadow" id="couponPro">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#coupon-product"
+                  aria-expanded="false"
+                  aria-controls="coupon-product"
+                >
+                  <div class="d-flex align-items-center text-white">
+                    <i class="bi bi-ticket-perforated-fill fs-5 me-2"></i>
+                    <h6>商品優惠券</h6>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="coupon-product"
+                class="accordion-collapse collapse"
+                data-bs-parent="#couponPro"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-lg-2 row-cols-1">
+                    <div class="col">
+                      <div class="card">
+                        <div class="card-body">
+                          <!-- coupon-1 -->
+                          <div
+                            class="coupon mt-4 mb-3 d-flex flex-nowrap justify-content-between"
+                          >
+                            <!-- img -->
+                            <div class="">
+                              <img
+                                src="./images/ISLA.png"
+                                alt=""
+                                class="img-fluid w-100 w-lg-75 w-xl-100"
+                              />
+                            </div>
+                            <!-- text -->
+                            <div class="content">
+                              <div class="top">
+                                <h3>折$150</h3>
+                              </div>
+                              <div class="bottom">
+                                <div>
+                                  <p class="main-text fw-medium">
+                                    全站商品 / 課程 - 滿2000元即享優惠NT$150
+                                  </p>
+                                  <p class="main-text mb-0 fw-light">
+                                    有效至 2025/12/31
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- button -->
+                            <div class="button-all d-flex align-items-center">
+                              <div
+                                class="text-group white d-flex flex-column gap-2"
+                              >
+                                <h5 class="mb-0 fw-light">領</h5>
+                                <h5 class="mb-0 fw-light">取</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" style="height: 12rem">
+                        <div class="card-body">一張優惠券</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="course-list card-style mb-3" style="height: 500px">
+            <!-- course-card -->
+            <!-- course-card -->
+          </div>
+          <!-- coupon-course -->
+          <div class="accordion mb-3 coupon-shadow" id="couponArea">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#coupon-course"
+                  aria-expanded="false"
+                  aria-controls="coupon-course"
+                >
+                  <div class="d-flex align-items-center text-white">
+                    <i class="bi bi-ticket-perforated-fill fs-5 me-2"></i>
+                    <h6>課程優惠券</h6>
+                  </div>
+                </button>
+              </h2>
+              <div
+                id="coupon-course"
+                class="accordion-collapse collapse"
+                data-bs-parent="#couponArea"
+              >
+                <div class="accordion-body">
+                  <div class="row row-cols-lg-2 row-cols-1">
+                    <div class="col">
+                      <div class="card" style="height: 12rem">
+                        <div class="card-body">一張優惠券</div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card" style="height: 12rem">
+                        <div class="card-body">一張優惠券</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-block d-lg-none" style="height: 850px"></div>
+
+        <!-- right -->
+        <div class="col-lg-4 col-12">
+          <div class="order-summary card-style mb-3">
+            <h5 class="fw-bold mb-5 text-maintext text-center">訂單明細</h5>
+            <!-- product-area -->
+            <div class="w-100 d-flex justify-content-between text-subtext mb-2">
+              <div class="d-flex">
+                <p class="me-2">彩妝商品</p>
+                <button
+                  type="button"
+                  class="btn btn-link p-0 text-center collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#islaProducts"
+                  aria-expanded="false"
+                  aria-controls="islaProducts"
+                >
+                  <i
+                    id="arrIcon"
+                    class="bi bi-caret-down-fill text-subtext"
+                  ></i>
+                </button>
+              </div>
+              <p><strong>NT$2500</strong></p>
+            </div>
+            <div class="collapse" id="islaProducts">
+              <div
+                class="w-100 d-flex justify-content-between text-subtext mb-2"
+              >
+                <p>[Kaja] Crystal Glam Tint</p>
+                <p>NT$1250</p>
+              </div>
+              <div
+                class="w-100 d-flex justify-content-between text-subtext mb-2"
+              >
+                <p>[Kaja] Crystal XXX XXX</p>
+                <p>NT$1250</p>
+              </div>
+            </div>
+            <div
+              class="w-100 d-flex justify-content-between text-secondary mb-2"
+            >
+              <p>Kaja品牌專屬優惠券85折</p>
+              <p>-$NT$375</p>
+            </div>
+
+            <!-- course-area -->
+            <div class="w-100 d-flex justify-content-between text-subtext mb-2">
+              <div class="d-flex">
+                <p class="me-2">彩妝課程</p>
+                <button
+                  type="button"
+                  class="btn btn-link p-0 text-center"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#islaCourses"
+                  aria-expanded="false"
+                  aria-controls="islaCourses"
+                >
+                  <i
+                    id="arrIcon"
+                    class="bi bi-caret-down-fill text-subtext"
+                  ></i>
+                </button>
+              </div>
+              <p><strong>NT$1800</strong></p>
+            </div>
+            <div class="collapse" id="islaCourses">
+              <div
+                class="w-100 d-flex justify-content-between text-subtext mb-2"
+              >
+                <p
+                  class="text-ellipsis"
+                  title="臉部撥筋Ｘ耳穴按摩Ｘ芳療活絡｜現代人的 10 分鐘舒壓養顏術"
+                >
+                  臉部撥筋Ｘ耳穴按摩Ｘ芳療活絡｜現代人的 10 分鐘舒壓養顏術
+                </p>
+                <p>NT$1800</p>
+              </div>
+            </div>
+            <div
+              class="w-100 d-flex justify-content-between text-secondary mb-2"
+            >
+              <p>指定彩妝課程折$300元</p>
+              <p>-NT$300</p>
+            </div>
+            <div
+              class="w-100 mb-3 rounded-pill"
+              style="height: 1px; background: #858585"
+            ></div>
+            <!--  -->
+            <div class="w-100 d-flex justify-content-between text-subtext mb-2">
+              <p>加購商品</p>
+              <p>NT$350</p>
+            </div>
+            <!--  -->
+            <div class="w-100 d-flex justify-content-between text-subtext mb-2">
+              <p>運費</p>
+              <p>NT$100</p>
+            </div>
+            <div
+              class="w-100 d-flex justify-content-between text-secondary mb-2"
+            >
+              <p>滿$NT3000元免運券</p>
+              <p>-$NT$100</p>
+            </div>
+            <div
+              class="w-100 mb-4 rounded-pill"
+              style="height: 1px; background: #858585"
+            ></div>
+            <div class="d-flex justify-content-between mb-3">
+              <h4>總計：</h4>
+              <h4><strong>NT$3975</strong></h4>
+            </div>
+            <button class="btn btn-primary text-white">結帳</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- add product  -->
+    <section class="container my-5">
+      <h2 class="fs-3 text-subtext m-5 text-center">加購商品</h2>
+      <!-- brand-nav -->
+      <ul class="nav nav-underline justify-content-between d-none d-lg-flex">
+        <!-- 01 -->
+        <li class="nav-item">
+          <button
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#unleashia"
+            type="button"
+            role="tab"
+          >
+            unleashia
+          </button>
+        </li>
+        <!-- 02 -->
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#cosnori"
+            type="button"
+            role="tab"
+          >
+            cosnori
+          </button>
+        </li>
+        <!-- 03 -->
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#muzigae-mansion"
+            type="button"
+            role="tab"
+          >
+            Muzigae Mansion
+          </button>
+        </li>
+        <!-- 04 -->
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#rom&nd"
+            type="button"
+            role="tab"
+          >
+            rom&nd
+          </button>
+        </li>
+        <!-- 05 -->
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#Kaja"
+            type="button"
+            role="tab"
+          >
+            Kaja
+          </button>
+        </li>
+        <!-- 06 -->
+        <li class="nav-item">
+          <button
+            class="nav-link"
+            data-bs-toggle="tab"
+            data-bs-target="#apieu"
+            type="button"
+            role="tab"
+          >
+            A'pieu
+          </button>
+        </li>
+      </ul>
+      <!-- brand-panel-unleashia -->
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade show active" id="unleashia" role="tabpanel">
+          <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <!-- product-card-01 -->
+            <div class="col">
+              <div class="card card-hover h-100 border-0">
+                <div class="position-relative">
+                  <img
+                    src="../public/images/image-01.png"
+                    class="card-img-top"
+                    alt="商品圖"
+                  />
+                  <button class="add-to-cart w-100">加入購物袋</button>
+                </div>
+                <div class="card-body">
+                  <p class="text-muted mb-3">unleashia</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-02 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-02.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">unleashia</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-03 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-03.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">unleashia</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-04 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-04.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">unleashia</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand-panel-cosnori -->
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade" id="cosnori" role="tabpanel">
+          <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <!-- product-card-01 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-01.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">cosnori</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-02 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-02.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">cosnori</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-03 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-03.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">cosnori</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-04 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-04.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">cosnori</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand-panel-muzigae_mansion -->
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade" id="muzigae-mansion" role="tabpanel">
+          <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <!-- product-card-01 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-01.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Muzigae Mansion</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-02 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-02.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Muzigae Mansion</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-03 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-03.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Muzigae Mansion</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-04 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-04.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Muzigae Mansion</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand-panel-rom&nd -->
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade" id="rom&nd" role="tabpanel">
+          <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <!-- product-card-01 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-01.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">rom&nd</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-02 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-02.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">rom&nd</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-03 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-03.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">rom&nd</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-04 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-04.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">rom&nd</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand-panel-Kaja -->
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade" id="Kaja" role="tabpanel">
+          <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <!-- product-card-01 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-01.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Kaja</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-02 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-02.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Kaja</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-03 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-03.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Kaja</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-04 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-04.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">Kaja</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- brand-panel-A'pieu -->
+      <div class="tab-content mt-4">
+        <div class="tab-pane fade" id="apieu" role="tabpanel">
+          <div class="row row-cols-2 row-cols-lg-4 g-4">
+            <!-- product-card-01 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-01.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">A'pieu</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-02 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-02.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">A'pieu</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-03 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-03.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">A'pieu</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+            <!-- product-card-04 -->
+            <div class="col">
+              <div class="card h-100 border-0">
+                <img
+                  src="../public/images/image-04.png"
+                  class="card-img-top"
+                  alt="商品圖"
+                />
+                <div class="card-body">
+                  <p class="text-muted mb-3">A'pieu</p>
+                  <h6 class="mb-1">Crystal Glam Tint</h6>
+                  <h5 class="mb-3">
+                    NT$860<del class="text-muted fs-6 ms-2">NT$1200</del>
+                  </h5>
+                  <small class="text-strong">
+                    <span class="badge bg-strong me-1 p-2">30%OFF</span>
+                    <span>省下 NT$360</span>
+                  </small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div id="footer"></div>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>
