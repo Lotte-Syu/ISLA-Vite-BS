@@ -94,6 +94,9 @@ body{
     }
   }
 }
+.accordion-body{
+  background: linear-gradient(to bottom, #FCEFEF 30%, #FFFFFF 100%);
+}
 .accordion-button {
   background: var(--coupon-linear);
   font-weight: bold;
@@ -124,7 +127,33 @@ body{
 }
 
 
-// nav-underline
+.color-dot {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+// 可選：選中的色號樣式
+.color-dot.active {
+  border: 2px solid #000;
+}
+
+.course-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block; // 或 inline-block
+  max-width: 15em; // ← 約限制 15 個中文字的寬度
+}
+
+
+
+// ===加購商品區===
+
+// nav-tab-underline
 .nav-underline .nav-link {
   color: var(--sub-text);
   position: relative;
@@ -159,12 +188,11 @@ body{
   }
 }
 
-
 .card-hover {
   position: relative;
   transition: opacity 0.3s ease;
 
-  // 預設整張卡片正常顯示
+
   &:hover {
     opacity: 0.7; 
   }

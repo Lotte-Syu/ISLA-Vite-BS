@@ -14,10 +14,6 @@ if(currentPath === "/" || currentPath === "/index.html"){
   loadTemplate("#footer", "../_components/footer.html");
 }
 
-
-
-
-
 // 訂單明細 下拉式選單Icon切換
 const arrorIcons = document.querySelectorAll("[data-bs-toggle='collapse']");
 arrorIcons.forEach((btn)=>{
@@ -33,3 +29,6 @@ arrorIcons.forEach((btn)=>{
     }
   });
 })
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+[...tooltipTriggerList].forEach(colorDot => new bootstrap.Tooltip(colorDot));
