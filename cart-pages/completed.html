@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plaster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      /* * {
+        outline: 1px solid rgba(0, 0, 0, 0.3);
+      } */
+    </style>
+    <title>ISLA 購物車</title>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container text-center text-lg-start">
+      <h1 class="text-subtext h2 m-5">購物袋</h1>
+    </div>
+
+    <!-- step-icon -->
+    <section class="container d-none d-lg-block mb-5">
+      <div class="d-flex align-items-center justify-content-center">
+        <!-- step1 -->
+        <div class="step-container">
+          <div class="step-active">1</div>
+          <a href="./cart-list.html"
+            ><span class="h5 text-secondary">確認購物車</span></a
+          >
+        </div>
+        <div class="rounded-pill step-line-active"></div>
+        <!-- step2 -->
+        <div class="step-container">
+          <div class="step-active">2</div>
+          <span class="h5 text-secondary">付款及運送方式</span>
+        </div>
+        <div class="rounded-pill step-line-active"></div>
+        <!-- step3 -->
+        <div class="step-container">
+          <div class="step-active">3</div>
+          <span class="h5 text-secondary">完成</span>
+        </div>
+      </div>
+    </section>
+    <!-- main -->
+    <section class="container my-5">
+      <div class="card p-5 text-center shadow-sm rounded-4">
+        <!-- 打勾圖示 -->
+        <div class="mb-4">
+          <div
+            class="bg-success-subtle rounded-circle d-inline-flex justify-content-center align-items-center"
+            style="width: 120px; height: 120px"
+          >
+            <i class="bi bi-check2 h1"></i>
+          </div>
+        </div>
+
+        <!-- 訂單完成訊息 -->
+        <h5 class="fw-bold text-secondary mb-2">已收到你的訂單</h5>
+        <p class="text-muted small mb-4">
+          訂單編號：<span class="fw-bold">1743478951522</span>
+        </p>
+
+        <!-- 訂單資訊列 -->
+        <div class="row text-center mb-4">
+          <div class="col-6 col-md-3 mb-2">
+            <div class="fw-bold">訂單日期</div>
+            <div class="text-muted">2025/04/17 13:38</div>
+          </div>
+          <div class="col-6 col-md-3 mb-2">
+            <div class="fw-bold">訂單狀態</div>
+            <div style="color: green">已確認</div>
+          </div>
+          <div class="col-6 col-md-3 mb-2">
+            <div class="fw-bold">付款方式</div>
+            <div class="text-muted">信用卡</div>
+          </div>
+          <div class="col-6 col-md-3 mb-2">
+            <div class="fw-bold">付款狀態</div>
+            <div style="color: green">已付款</div>
+          </div>
+        </div>
+
+        <!-- 收件人collapse -->
+        <div class="d-flex justify-space-between w-100">
+          <h5 class="me-2">收件人資訊</h5>
+          <!-- dropdown -->
+          <button
+            type="button"
+            class="btn btn-link p-0 text-center collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#recipientInfo"
+            aria-expanded="false"
+            aria-controls="recipientInfo"
+          >
+            <i id="arrIcon" class="bi bi-caret-down-fill text-subtext"></i>
+          </button>
+        </div>
+        <div class="collapse" id="recipientInfo">
+          <div class="w-100 text-maintext card card-body text-start">
+            <p>收件人：洛特</p>
+            <p>收件人電話：0977-000-000</p>
+            <p>收件人地址：台北市中正區仁愛路一段1號</p>
+          </div>
+        </div>
+
+        <!-- 商品 collapse -->
+        <div class="d-flex justify-">
+          <h5 class="me-2">商品</h5>
+          <!-- dropdown -->
+          <button
+            type="button"
+            class="btn btn-link p-0 text-center collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#productInfo"
+            aria-expanded="false"
+            aria-controls="productInfo"
+          >
+            <i id="arrIcon" class="bi bi-caret-down-fill text-subtext"></i>
+          </button>
+        </div>
+        <div class="collapse" id="productInfo">
+          <div class="w-100 text-maintext card card-body text-start"></div>
+        </div>
+
+        <!-- 按鈕區塊 -->
+        <div class="d-grid gap-2 d-md-flex justify-content-center">
+          <button class="btn btn-outline-secondary px-5" type="button">
+            查看訂單
+          </button>
+          <button class="btn btn-subtext text-white px-5" type="button">回到首頁</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="d-block d-lg-none" style="height: 850px"></div>
+    <div id="footer"></div>
+    <script type="module" src="../src/main.js"></script>
+  </body>
+</html>

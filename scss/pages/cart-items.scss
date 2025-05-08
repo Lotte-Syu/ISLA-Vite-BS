@@ -3,6 +3,7 @@ body{
     padding-inline: 24px !important;
   }
 }
+// step-circle-style
 @mixin step-style($bg-color){
   background: $bg-color;
   color:var(--white);
@@ -37,13 +38,17 @@ body{
   width: 300px;
   height: 5px;
 }
-
-.step-line-active{
+.step-line{
+  @include step-line-style(var(--sub-element));
+}
+.step-line-progress{
   @include step-line-style(var(--bar-linear));
 }
-.step-line{
-  @include step-line-style(var(--step-linear));
+.step-line-active{
+  @include step-line-style(var(--btn-bg));
 }
+
+
 .text-ellipsis {
   width: 12em;  
   white-space: nowrap;
@@ -94,9 +99,7 @@ body{
     }
   }
 }
-.accordion-body{
-  background: linear-gradient(to bottom, #FCEFEF 30%, #FFFFFF 100%);
-}
+
 .accordion-button {
   background: var(--coupon-linear);
   font-weight: bold;
@@ -130,29 +133,51 @@ body{
 .color-dot {
   width: 14px;
   height: 14px;
-  display: inline-block;
+  display: block;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid #ccc;
 }
 
-// 可選：選中的色號樣式
+// 選中的色號樣式
 .color-dot.active {
-  border: 2px solid #000;
+  border: 2px solid var(--main-text);
 }
 
 .course-title {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  display: block; // 或 inline-block
-  max-width: 15em; // ← 約限制 15 個中文字的寬度
+  max-width: 15em;
+}
+
+.break-word {
+  word-break: break-all;
+  width: 20rem; 
+}
+
+// checkbox style
+.form-check-input {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.25rem;
+  // border: 2px solid var(--bs-primary);
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-check-input:checked {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-primary);
+}
+
+.form-check-input:focus {
+  box-shadow: none; 
 }
 
 
 
 // ===加購商品區===
-
 // nav-tab-underline
 .nav-underline .nav-link {
   color: var(--sub-text);
