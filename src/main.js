@@ -3,13 +3,13 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import loadTemplate from "./load-template";
 
 // pathname = index，載入一般footer
-loadTemplate("#header", "../_components/header.html");
+loadTemplate("#header", "/ISLA-Vite-BS/_components/header.html");
 const currentPath = location.pathname;
 // console.log(currentPath);
-if(currentPath === "/" || currentPath === "/index.html"){
-  loadTemplate("#footer", "../_components/footer-general.html");
+if(currentPath === "/ISLA-Vite-BS/" || currentPath === "/ISLA-Vite-BS/index.html"){
+  loadTemplate("#footer", "/ISLA-Vite-BS/_components/footer-general.html");
 }else{
-  loadTemplate("#footer", "../_components/footer.html");
+  loadTemplate("#footer", "/ISLA-Vite-BS/_components/footer.html");
 }
 
 // 訂單明細 下拉式選單Icon切換
