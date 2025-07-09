@@ -22,11 +22,9 @@
     #fff 96%
   );
 }
-footer {
-  padding-inline: 12px;
-}
-.footer-side {
-  background: #f2e7e7;
+
+footer{
+  background-color: var(--footerListColor);
 }
 .footer-body {
   height: 100%;

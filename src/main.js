@@ -54,19 +54,3 @@ const changeShipRadio = () => {
 
 radioShipHome.addEventListener("change", changeShipRadio);
 radioShip711.addEventListener("change", changeShipRadio);
-
-
-
-// radioShipHome.addEventListener("change", (evt)=>{
-//   if(evt.target.checked === true){
-//     shipInfo.classList.remove("d-none");
-//     shipInfo.classList.add("d-block");
-//   }
-// })
-
-// radioShip711.addEventListener("change", (evt)=>{
-//   if(evt.target.checked === true){
-//     store711Info.classList.remove("d-none");
-//     store711Info.classList.add("d-block");
-//   }
-// })
